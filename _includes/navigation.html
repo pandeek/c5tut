@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">My Site</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+
+
+
+      {% if site.data.navigation.main_nav[0] %}
+        {% for item in site.data.navigation.main_nav %}
+
+          {% if item.sublinks[0] %}
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ item.name }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              {% for sublink in item.sublinks %}
+                      <a class="dropdown-item" href="{{ sublink.link }}">{{ sublink.name }}</a>
+              {% endfor %}
+            </div>
+          </li>
+
+            {% else %}
+            <a {% if page.url == item.link %} class="nav-item nav-link active"{% else %} class="nav-item nav-link" {% endif %} href="{{ item.link }}">
+              {{ item.name }}
+            </a>
+
+
+
+        
+
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+
+
+    </div>
+  </div>
+</nav>
+
+<br>
+
+

@@ -1,0 +1,23 @@
+collections:
+  concrete5:
+    output: true
+    order:
+      - about.md
+      - prerequisites.md
+      - filestructure.md
+      - blankstart.md
+
+defaults:
+  - scope:
+      path: ""
+      type: "concrete5"
+    values:
+      layout: "concrete5"
+    
+
+
+
+
+sass:
+  style: compressed
+
