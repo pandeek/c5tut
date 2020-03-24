@@ -15,7 +15,7 @@ defaults:
       layout: "concrete5"
     
 
-baseurl             : "/c5tut" # does not include hostname
+baseurl: /c5tut 
 
 
 sass:

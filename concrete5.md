@@ -11,7 +11,7 @@ This will be great.
 <ul>
   {% for article in site.concrete5 %}
     <li>
-      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+      <h2><a href="{{ article.url | prepend: site.baseurl  }}">{{ article.title }}</a></h2>
       <h3>{{ article.desc }}</h3>
     </li>
   {% endfor %}
@@ -21,7 +21,7 @@ This will be great.
 <ul>
   {% for article in site.concrete5 %}
     <li>
-      <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+      <h2><a href="{{ article.url | prepend: site.baseurl  }}">{{ article.title }}</a></h2>
     </li>
   {% endfor %}
 </ul>
